@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventoryapp.ModProductFXMLController">
+   <children>
+      <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0">
+         <children>
+            <VBox layoutX="7.0" layoutY="184.0" prefHeight="300.0" prefWidth="400.0">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="400.0">
+                     <children>
+                        <TextField fx:id="idText" editable="false" layoutX="154.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="200.0" promptText="Auto Gen - Disabled" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0" />
+                        <Label layoutX="64.0" layoutY="13.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="39.0" text="ID" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="3.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="400.0">
+                     <children>
+                        <TextField fx:id="nameText" layoutX="159.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="200.0" promptText="Product name" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0" />
+                        <Label layoutX="83.0" layoutY="6.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="39.0" text="Name" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="3.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="400.0">
+                     <children>
+                        <TextField fx:id="invText" layoutX="172.0" layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="200.0" promptText="Inv" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0" />
+                        <Label layoutX="71.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="39.0" text="Inv" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="3.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="400.0">
+                     <children>
+                        <TextField fx:id="priceText" layoutX="207.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="200.0" promptText="Price" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0" />
+                        <Label layoutX="76.0" layoutY="2.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="39.0" text="Price" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="3.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="400.0">
+                     <children>
+                        <TextField fx:id="minText" layoutX="341.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="66.0" promptText="Min" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0" />
+                        <Label layoutX="73.0" layoutY="2.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="39.0" text="Max" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="3.0" />
+                        <Label layoutX="268.0" layoutY="2.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="39.0" text="Min" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="3.0" />
+                        <TextField fx:id="maxText" layoutX="183.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="66.0" promptText="Max" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="3.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <Label layoutX="14.0" layoutY="48.0" text="Modify product">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="partsTable" layoutX="427.0" layoutY="88.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#partsTableSelected" prefHeight="200.0" prefWidth="640.0" AnchorPane.rightAnchor="50.0">
+              <columns>
+                <TableColumn fx:id="partId" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" text="Product ID" />
+                <TableColumn fx:id="partName" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" text="Product Name" />
+                  <TableColumn fx:id="partInv" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" text="Inventory Level" />
+                  <TableColumn fx:id="partPrice" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" text="Price/unit" />
+              </columns>
+            </TableView>
+            <TableView fx:id="associatedPartsTable" layoutX="427.0" layoutY="418.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="640.0" AnchorPane.rightAnchor="50.0">
+               <columns>
+                  <TableColumn fx:id="aPartId" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" text="Product ID" />
+                  <TableColumn fx:id="aPartName" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" text="Product Name" />
+                  <TableColumn fx:id="aPartInv" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" text="Inventory Level" />
+                  <TableColumn fx:id="aPartPrice" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" text="Price/unit" />
+               </columns>
+            </TableView>
+            <Button fx:id="saveButton" layoutX="953.0" layoutY="675.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveButton" prefHeight="39.0" prefWidth="78.0" text="Save" />
+            <Button fx:id="closeButton" layoutX="989.0" layoutY="675.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#closeWindow" prefHeight="39.0" prefWidth="78.0" text="Cancel" AnchorPane.rightAnchor="80.0" />
+            <Button fx:id="deleteButton" layoutX="989.0" layoutY="625.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteButton" prefHeight="39.0" prefWidth="78.0" text="Delete" AnchorPane.rightAnchor="80.0" />
+            <Button fx:id="addButton" layoutX="989.0" layoutY="295.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addPartButton" prefHeight="39.0" prefWidth="78.0" text="Add" AnchorPane.rightAnchor="80.0" />
+            <HBox layoutX="845.0" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="305.0">
+               <children>
+                  <Button fx:id="partsSearchButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#partSearchButton" prefHeight="39.0" prefWidth="78.0" text="Search" />
+                  <TextField fx:id="partsSearchText" onAction="#partSearchButton">
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
